@@ -2,7 +2,7 @@
 * { box-sizing: border-box; margin: 0; padding: 0 }
 body { font-family: Arial, sans-serif; line-height: 1.4; }
 
-/* helpers */
+
 .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 a { text-decoration: none; }
 
@@ -24,18 +24,33 @@ a { text-decoration: none; }
   top: 0;
   left: 0;
   width: 100%;
-  height: 80px;  
+  height: 90px;  
   z-index: 1001;
 
 }
 .primary-nav .container {
   display: flex; align-items: center; justify-content: space-between;
-  padding: 19px 0;
+  padding: 12px 0;
   
 }
 .primary-nav .logo {
   font-weight: bold; font-size: 1.2em; color: var(--text-light);
 }
+/* Size the img inside .logo */
+.primary-nav .logo img {
+  height: 60px;      
+  width: auto;
+  display: block;  
+/* removes inline-img whitespace */
+}
+.primary-nav .badge-logo {
+  display: block;
+  height: 50px;     /* adjust this to taste */
+  width: auto;
+  margin-top: 5px;  /* nudge it down/up inside the bar if needed */
+}
+
+
 .primary-nav nav ul { display: flex; list-style: none; }
 .primary-nav nav li { margin: 0 15px; }
 .primary-nav nav a { color: var(--text-light); font-size: .95em; }
@@ -46,7 +61,7 @@ a { text-decoration: none; }
 .secondary-nav {
   background: var(--black);
   position: fixed;
-  top: 60px;    /* set this to your primary-nav’s total height */
+  top: 80px;    /* set this to your primary-nav’s total height */
   left: 0;
   width: 100%;
   z-index: 1001;
@@ -71,7 +86,7 @@ body {
 }
 
 /* hero */
-.hero { position: relative; }
+.hero { position: relative; margin-top: 40px;  }
 .hero img { width: 100%; display: block; }
 .hero-text {
   position: absolute; bottom: 30px; left: 30px;
@@ -85,10 +100,14 @@ body {
 }
 
 /* featured posts */
-.featured-posts { padding: 40px 0; }
-.featured-posts h2 { margin-bottom: 20px; font-size: 1.6em; }
+.featured-posts {
+  position: relative;
+  margin-top: -600px; /* pull it up into the hero—adjust until it looks right */
+  z-index: 5;         /* sit above the image */
+}
+.featured-posts h2 { margin-bottom: 20px; font-size: 2.6em;text-align: left;}
 .posts-grid {
-  display: flex; flex-wrap: wrap; gap: 20px;
+  display: flex; flex-wrap: wrap; gap: 50px;
 }
 .posts-grid article {
   flex: 1 1 calc(25% - 20px);
@@ -98,7 +117,9 @@ body {
 .posts-grid h3 { font-size: 1em; color: var(--text-dark); }
 
 /* schedule */
-.schedule { background: var(--light-gray); padding: 40px 0; }
+.schedule { background: var(--light-gray); padding: 40px 0; margin-top: 180px;  /* tweak this value until the OCT 11 row is fully visible */
+  position: relative; /* so z-index will apply if you need it */
+  z-index: 1;         /* ensure it sits above the negative-margined posts */ }
 .schedule h2 {
   display: flex; align-items: center; gap: 20px;
   font-size: 1.6em; margin-bottom: 30px;
