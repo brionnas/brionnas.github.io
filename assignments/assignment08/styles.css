@@ -1,0 +1,181 @@
+/* === Reset & Base === */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: sans-serif;
+  background: #f0f4f2;
+  color: #334e68;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+header {
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+}
+h1 { font-size: 2rem; }
+h2 { font-size: 1.25rem; color: #d7790f; margin-bottom: .5rem; }
+
+/* === Nav & Toggle === */
+.nav-toggle {
+  position: absolute;
+  left: 1rem;
+  top: 1.5rem;
+  cursor: pointer;
+  user-select: none;
+}
+#menu {
+  list-style: none;
+  transition: max-height .3s ease;
+  overflow: hidden;
+  max-height: 0;
+}
+#menu.show {
+  max-height: 200px;
+}
+#menu li {
+  padding: .5rem 0;
+  cursor: pointer;
+}
+#menu li:hover { text-decoration: underline; }
+
+/* large-screen: horizontal menu with pipes */
+@media (min-width: 600px) {
+  .nav-toggle { display: none; }
+  #menu {
+    display: flex !important;
+    max-height: none;
+    justify-content: center;
+  }
+  #menu li {
+    display: inline-block;
+    padding: 0 .5rem;
+  }
+  #menu li:not(:last-child)::after {
+    content: "|";
+    margin-left: .5rem;
+    color: #334e68;
+  }
+}
+
+/* === Main Sections === */
+main {
+  flex: 1;
+  padding: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.exercise {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+.hidden { display: none; }
+
+/* === Exercise 1: Animation === */
+.speed-controls {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.anim-container {
+  position: relative;
+  height: 120px;
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+}
+.anim-container img {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 80px;
+}
+
+/* === Exercise 2: CSS Art placeholders === */
+.art-buttons {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.art-buttons button {
+  margin: 0 .5rem;
+}
+.art-container {
+  height: 200px;
+  position: relative;
+}
+
+/* === CSS Art === */
+/* Moon (crescent) – from CSS-tricks.com */
+.moon {
+  width: 80px;
+  height: 80px;
+  background: #fffa92;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+.moon::before {
+  content: "";
+  width: 80px;
+  height: 80px;
+  background: #f0f4f2;
+  border-radius: 50%;
+  position: absolute;
+  left: 20px;
+  top: 0;
+}
+
+/* Star – clip-path from MDN examples */
+.star {
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  clip-path: polygon(
+    50% 0%, 61% 35%, 98% 35%,
+    68% 57%, 79% 91%, 50% 70%,
+    21% 91%, 32% 57%, 2% 35%,
+    39% 35%
+  );
+  background: gold;
+  width: 100px;
+  height: 100px;
+}
+
+/* Cloud – from CSS-tricks.com */
+.cloud {
+  width: 120px;
+  height: 60px;
+  background: #e1e5ee;
+  border-radius: 60px;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+.cloud::before,
+.cloud::after {
+  content: "";
+  background: #e1e5ee;
+  position: absolute;
+  border-radius: 50%;
+}
+.cloud::before {
+  width: 80px;
+  height: 80px;
+  top: -40px;
+  left: 10px;
+}
+.cloud::after {
+  width: 100px;
+  height: 100px;
+  top: -50px;
+  left: 50px;
+}

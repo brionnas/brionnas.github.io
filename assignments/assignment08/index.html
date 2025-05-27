@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Assignment 8 – If Statements</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Assignment 8</h1>
+    <h2>If Statements</h2>
+    <div class="nav-toggle" id="navToggle">▼</div>
+    <ul id="menu">
+      <li data-ex="1">Exercise 1</li>
+      <li data-ex="2">Exercise 2</li>
+    </ul>
+  </header>
+
+  <main>
+    <!-- Exercise 1: Speeding -->
+    <section id="exercise1" class="exercise">
+      <h3>Let's Speed</h3>
+      <div class="speed-controls">
+        <input type="range" id="speedRange" min="1" max="5" value="3">
+        <button id="goBtn">Go</button>
+        <button id="stopBtn">Stop</button>
+      </div>
+      <div class="anim-container">
+      <img id="bike" src="bike.jpg" alt="Bike">
+      </div>
+    </section>
+
+    <!-- Exercise 2: CSS Art -->
+    <section id="exercise2" class="exercise hidden">
+      <h3>CSS Art</h3>
+      <div class="art-buttons">
+        <button data-art="moon">Moon</button>
+        <button data-art="star">Star</button>
+        <button data-art="cloud">Cloud</button>
+      </div>
+      <div id="artContainer" class="art-container"></div>
+    </section>
+  </main>
+
+  <footer>@brionnass.com</footer>
+  <script src="script.js"></script>
+</body>
+</html>
