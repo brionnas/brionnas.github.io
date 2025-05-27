@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RecipeHub — My Cookbook</title>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* two-column grid for saved recipes */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--gap);
+    }
+    /* sidebar tweaks */
+    .cookbook-sidebar button {
+      width: 100%;
+      padding: .75rem;
+      margin-bottom: var(--gap);
+      border: none;
+      background: var(--accent);
+      color: var(--bg);
+      cursor: pointer;
+    }
+    .cookbook-sidebar .card {
+      padding: var(--gap);
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="container">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="browse.html">Browse Recipes</a></li>
+        <li><a href="cookbook.html" class="active">My Cookbook</a></li>
+        <li><a href="submit.html">Submit Recipe</a></li>
+        <li><a href="admin.html">Admin Dashboard</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <h1>Hello User</h1>
+    <div class="two-col">
+      <!-- Saved Recipes Column -->
+      <section>
+        <h2>Saved Recipes</h2>
+        <div class="grid-2">
+          <!-- repeat this card for each saved recipe -->
+          <div class="card">
+            <img src="placeholder-images/placeholder.jpg" alt="Recipe thumbnail">
+            <h3>Name</h3>
+            <p>Time</p>
+            <p>
+              <a href="#">Scale Serving</a> |
+              <a href="#">Remove</a>
+            </p>
+          </div>
+          <div class="card">
+            <img src="placeholder-images/placeholder.jpg" alt="Recipe thumbnail">
+            <h3>Name</h3>
+            <p>Time</p>
+            <p>
+              <a href="#">Scale Serving</a> |
+              <a href="#">Remove</a>
+            </p>
+          </div>
+          <div class="card">
+            <img src="placeholder-images/placeholder.jpg" alt="Recipe thumbnail">
+            <h3>Name</h3>
+            <p>Time</p>
+            <p>
+              <a href="#">Scale Serving</a> |
+              <a href="#">Remove</a>
+            </p>
+          </div>
+          <div class="card">
+            <img src="placeholder-images/placeholder.jpg" alt="Recipe thumbnail">
+            <h3>Name</h3>
+            <p>Time</p>
+            <p>
+              <a href="#">Scale Serving</a> |
+              <a href="#">Remove</a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sidebar Column -->
+      <aside class="cookbook-sidebar">
+        <button>Meal Planner</button>
+        <h2>To do list</h2>
+        <div class="card">
+          <label><input type="checkbox" checked> Option 1</label><br>
+          <label><input type="checkbox"> Option 2</label><br>
+          <label><input type="checkbox"> Option 3</label><br>
+          <label><input type="checkbox"> Option 4</label>
+        </div>
+      </aside>
+    </div>
+  </main>
+</body>
+</html>

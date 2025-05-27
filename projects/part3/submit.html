@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RecipeHub — Submit Recipe</title>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    
+    .add-ingredient {
+      margin-bottom: var(--gap);
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="container">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="browse.html">Browse Recipes</a></li>
+        <li><a href="cookbook.html">My Cookbook</a></li>
+        <li><a href="submit.html" class="active">Submit Recipe</a></li>
+        <li><a href="admin.html">Admin Dashboard</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <section class="submit-recipe">
+      <h1>Submit Recipe</h1>
+      <div class="two-col">
+        <!-- Form Column -->
+        <form>
+          <label for="title">Recipe Title</label>
+          <input id="title" type="text" placeholder="Please enter">
+
+          <label for="description">Description</label>
+          <textarea id="description" rows="3" placeholder="Please enter"></textarea>
+
+          <label>Ingredients</label>
+          <div class="ingredients-list">
+            <input type="text" placeholder="Please enter">
+            <input type="text" placeholder="Please enter">
+            <input type="text" placeholder="Please enter">
+          </div>
+          <button type="button" class="add-ingredient">+ Add Ingredient</button>
+
+          <label for="photo">Upload Photo</label>
+          <input id="photo" type="file" accept="image/*">
+        </form>
+
+        <!-- Preview Column -->
+        <aside class="preview">
+          <h2>Recipe Preview</h2>
+          <div class="card">
+            <img src="placeholder-images/placeholder.jpg" alt="Recipe preview">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,10 @@
+:root {
+  /* base colors */
+  --bg: #ffffff;
+  --text: #000000;
+  --border: #e0e0e0;
+  --accent: #000000;
+  /* layout */
+  --max-width: 1200px;
+  --gap: 1.5rem;
+}
