@@ -1,0 +1,70 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fdf7ed;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: #e27ca1;
+  margin: 1rem 0 0.2rem;
+}
+
+h2 {
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.hotdog-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.hotdog {
+  position: relative;
+  width: 250px;
+  cursor: pointer;
+}
+
+.hotdog img {
+  width: 100%;
+  border-radius: 4px;
+  height: 180px;
+
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.65);
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.hotdog:hover .overlay {
+  opacity: 1;
+}
+
+.modal-box {
+  padding: 2rem;
+  background-color: #e6c97e;
+  color: #222;
+  max-width: 400px;
+  margin: auto;
+  border-radius: 6px;
+}
+
+.credit {
+  font-size: 0.9rem;
+  margin-top: 2rem;
+  color: #999;
+}
