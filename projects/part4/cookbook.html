@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Cookbook — RecipeHub</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="nav-container">
+        <a href="index.html" class="logo">
+          <i class="fas fa-utensils"></i>
+          RecipeHub
+        </a>
+        <nav id="mainNav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="browse.html">Browse Recipes</a></li>
+            <li><a href="cookbook.html" class="active">My Cookbook</a></li>
+            <li><a href="submit.html">Submit Recipe</a></li>
+            <li><a href="admin.html">Admin Dashboard</a></li>
+          </ul>
+        </nav>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1>My Cookbook</h1>
+      <p>Welcome back, Chef! Manage your recipes, plan meals, and track your culinary journey.</p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <div class="container">
+    <!-- Stats Section -->
+    <section>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <i class="fas fa-book-open" style="color: var(--primary);"></i>
+          <h4>Saved Recipes</h4>
+          <p>24</p>
+        </div>
+        <div class="stat-card">
+          <i class="fas fa-calendar-alt" style="color: var(--accent);"></i>
+          <h4>Meals Planned</h4>
+          <p>12</p>
+        </div>
+        <div class="stat-card">
+          <i class="fas fa-shopping-cart" style="color: var(--success);"></i>
+          <h4>Shopping Items</h4>
+          <p>8</p>
+        </div>
+        <div class="stat-card">
+          <i class="fas fa-star" style="color: #FFD700;"></i>
+          <h4>Avg Rating</h4>
+          <p>4.7</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="two-col">
+      <!-- Left Column -->
+      <div>
+        <!-- Recipe Collections -->
+        <section>
+          <h2 class="section-title">Recipe Collections</h2>
+          <div class="collection-tabs">
+            <button class="tab-btn active" onclick="showCollection('all')">All Recipes</button>
+            <button class="tab-btn" onclick="showCollection('favorites')">Favorites</button>
+            <button class="tab-btn" onclick="showCollection('tried')">Recently Tried</button>
+            <button class="tab-btn" onclick="showCollection('custom')">My Creations</button>
+          </div>
+
+          <div id="allRecipes" class="recipe-collection">
+            <div class="grid-2">
+              <!-- Example Recipe Card -->
+              <div class="card">
+                <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=400&h=200&fit=crop" alt="Chicken Tikka Masala" />
+                <div class="card-content">
+                  <h3>Chicken Tikka Masala</h3>
+                  <p>Creamy and flavorful Indian curry with tender chicken</p>
+                  <div class="card-meta">
+                    <span><i class="fas fa-clock"></i> 40 min</span>
+                    <span class="rating">4.8</span>
+                  </div>
+                  <div class="card-actions">
+                    <a href="#"><i class="fas fa-eye"></i> View</a>
+                    <a href="#"><i class="fas fa-utensils"></i> Scale</a>
+                    <a href="#" onclick="removeFromCookbook(this)"><i class="fas fa-trash"></i> Remove</a>
+                  </div>
+                </div>
+              </div>
+              <!-- Repeat card layout for other recipes -->
+            </div>
+          </div>
+        </section>
+
+        <!-- Meal Planning -->
+        <section>
+          <h2 class="section-title">Weekly Meal Planner</h2>
+          <div class="meal-planner">
+            <div class="meal-header">
+              <h3>This Week</h3>
+              <button class="btn btn-secondary"><i class="fas fa-plus"></i> Add Meal</button>
+            </div>
+            <div class="week-grid">
+              <!-- Example Day -->
+              <div class="day-card today"><h4>Wed</h4><small>Pizza Night</small></div>
+              <!-- Repeat for other days -->
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Right Column (Sidebar) -->
+      <aside class="sidebar">
+        <button class="btn full-width"><i class="fas fa-calendar-alt"></i> Full Meal Planner</button>
+
+        <h3>Shopping List</h3>
+        <div class="shopping-list" id="shoppingList">
+          <div class="shopping-item completed">
+            <input type="checkbox" checked />
+            <span>Fresh basil</span>
+          </div>
+          <!-- More items -->
+        </div>
+        <button class="btn btn-secondary full-width" onclick="addShoppingItem()"><i class="fas fa-plus"></i> Add Item</button>
+
+        <div class="tips-box">
+          <h4>🍳 Cooking Tips</h4>
+          <ul>
+            <li>Prep ingredients first</li>
+            <li>Adjust seasoning</li>
+            <li>Clean workspace</li>
+            <li>Read the full recipe</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="logo"><i class="fas fa-utensils"></i> RecipeHub</div>
+      <p>Bringing food lovers together, one recipe at a time.</p>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+      <p>© 2024 RecipeHub. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Submit Your Recipe — RecipeHub</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="nav-container">
+        <a href="index.html" class="logo">
+          <i class="fas fa-utensils"></i> RecipeHub
+        </a>
+        <nav id="mainNav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="browse.html">Browse Recipes</a></li>
+            <li><a href="cookbook.html">My Cookbook</a></li>
+            <li><a href="submit.html" class="active">Submit Recipe</a></li>
+            <li><a href="admin.html">Admin Dashboard</a></li>
+          </ul>
+        </nav>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <h1>Submit Your Recipe</h1>
+        <p>Share your culinary creations with our community!</p>
+      </div>
+    </section>
+
+    <div class="container two-col">
+      <form id="recipeForm">
+        <div class="form-group">
+          <label for="title">Recipe Title</label>
+          <input id="title" type="text" placeholder="Enter your recipe name" required />
+        </div>
+
+        <div class="form-group">
+          <label for="description">Description</label>
+          <textarea id="description" rows="4" placeholder="Describe your recipe and what makes it special" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>Ingredients</label>
+          <div id="ingredientsList">
+            <input type="text" placeholder="e.g., 2 cups all-purpose flour" />
+            <input type="text" placeholder="e.g., 1 tsp baking powder" />
+            <input type="text" placeholder="e.g., 1/2 cup sugar" />
+          </div>
+          <button type="button" class="btn btn-secondary" onclick="addIngredient()">
+            <i class="fas fa-plus"></i> Add Ingredient
+          </button>
+        </div>
+
+        <div class="form-group">
+          <label for="prep-time">Prep Time (minutes)</label>
+          <input id="prep-time" type="number" placeholder="15" />
+        </div>
+
+        <div class="form-group">
+          <label for="cook-time">Cook Time (minutes)</label>
+          <input id="cook-time" type="number" placeholder="30" />
+        </div>
+
+        <div class="form-group">
+          <label for="servings">Servings</label>
+          <input id="servings" type="number" placeholder="4" />
+        </div>
+
+        <div class="form-group">
+          <label for="category">Category</label>
+          <select id="category">
+            <option>Select a category</option>
+            <option>Appetizers</option>
+            <option>Main Dishes</option>
+            <option>Desserts</option>
+            <option>Soups & Salads</option>
+            <option>Beverages</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="photo">Upload Photo</label>
+          <input id="photo" type="file" accept="image/*" />
+        </div>
+
+        <button type="submit" class="btn">
+          <i class="fas fa-paper-plane"></i> Submit Recipe
+        </button>
+      </form>
+
+      <!-- Preview & Tips -->
+      <aside>
+        <h3 style="margin-bottom: 1rem;">Recipe Preview</h3>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=200&fit=crop" alt="Recipe preview" />
+          <div class="card-content">
+            <h3 id="previewTitle">Your Amazing Recipe</h3>
+            <p id="previewDesc">Your recipe description will appear here. Make it enticing to help others discover your creation!</p>
+            <div class="card-meta">
+              <span id="previewPrep"><i class="fas fa-clock"></i> -- min</span>
+              <span id="previewServings"><i class="fas fa-users"></i> Serves --</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top: 1.5rem;">
+          <h4>📝 Recipe Tips</h4>
+          <ul style="margin-top: 0.75rem;">
+            <li>Use high-quality photos for better engagement</li>
+            <li>Be specific with measurements and timing</li>
+            <li>Include helpful cooking tips and tricks</li>
+            <li>Tag dietary restrictions appropriately</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <script>
+    // Ingredient input add
+    function addIngredient() {
+      const ingredientsList = document.getElementById('ingredientsList');
+      const input = document.createElement('input');
+      input.type = 'text';
+      input.placeholder = 'Enter another ingredient';
+      input.style.marginTop = '0.5rem';
+      ingredientsList.appendChild(input);
+    }
+
+    // Live preview updates
+    const titleInput = document.getElementById('title');
+    const descInput = document.getElementById('description');
+    const prepInput = document.getElementById('prep-time');
+    const servingsInput = document.getElementById('servings');
+
+    titleInput.addEventListener('input', () => {
+      document.getElementById('previewTitle').textContent = titleInput.value || 'Your Amazing Recipe';
+    });
+
+    descInput.addEventListener('input', () => {
+      document.getElementById('previewDesc').textContent = descInput.value || 'Your recipe description will appear here.';
+    });
+
+    function updateMeta() {
+      document.getElementById('previewPrep').innerHTML = `<i class="fas fa-clock"></i> ${prepInput.value || '--'} min`;
+      document.getElementById('previewServings').innerHTML = `<i class="fas fa-users"></i> Serves ${servingsInput.value || '--'}`;
+    }
+
+    prepInput.addEventListener('input', updateMeta);
+    servingsInput.addEventListener('input', updateMeta);
+  </script>
+</body>
+</html>
+
