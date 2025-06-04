@@ -23,7 +23,7 @@ range.addEventListener('input', () => {
 
 const showBtn = document.getElementById('showBtn');
 
-// Button click: replace with an ice-cream image
+
 showBtn.addEventListener('click', () => {
   const img = document.createElement('img');
   img.src    = 'icecream.jpg';
