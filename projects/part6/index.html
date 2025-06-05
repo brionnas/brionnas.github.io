@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RecipeHub — Discover & Share Amazing Recipes</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="nav-container">
+        <div class="logo">
+          <i class="fas fa-utensils"></i>
+          RecipeHub
+        </div>
+        <nav id="mainNav">
+          <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="browse.html">Browse Recipes</a></li>
+            <li><a href="cookbook.html">My Cookbook</a></li>
+            <li><a href="submit.html">Submit Recipe</a></li>
+            <li><a href="admin.html">Admin Dashboard</a></li>
+          </ul>
+        </nav>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle">
+  <i class="fas fa-bars"></i>
+</button>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <h1>Discover & Share Amazing Recipes</h1>
+        <p>Join our community of food lovers and explore thousands of delicious recipes from around the world</p>
+        <a href="browse.html" class="cta-button">
+          <i class="fas fa-search"></i>
+          Start Exploring
+        </a>
+      </div>
+    </section>
+
+    <div class="container">
+      <!-- Featured Recipe -->
+      <section class="featured">
+        <h2 class="section-title">Featured Recipe of the Day</h2>
+        <div class="featured-card">
+          <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=400&h=200&fit=crop" alt="Delicious Italian Pasta with fresh basil and tomatoes">
+          <div class="featured-content">
+            <h3>Authentic Italian Carbonara</h3>
+            <p>A classic Roman pasta dish with eggs, cheese, pancetta, and pepper. This traditional recipe has been passed down through generations and delivers rich, creamy flavors that will transport you straight to Italy.</p>
+            <div class="card-meta">
+              <span><i class="fas fa-clock"></i> 25 minutes</span>
+              <span><i class="fas fa-users"></i> Serves 4</span>
+              <span class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                4.9 (127 reviews)
+              </span>
+            </div>
+            <a href="#" class="btn">
+              <i class="fas fa-arrow-right"></i>
+              View Recipe
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Latest Recipes Preview -->
+      <section class="latest-preview">
+        <h2 class="section-title">Latest Recipes</h2>
+        <p class="section-subtitle">Fresh recipes added by our community of passionate home cooks</p>
+        
+        <div class="grid-3">
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&h=200&fit=crop" alt="Fresh Mediterranean Salad">
+            <div class="card-content">
+              <h3>Mediterranean Quinoa Salad</h3>
+              <p>Fresh and healthy salad packed with Mediterranean flavors</p>
+              <div class="card-meta">
+                <span><i class="fas fa-clock"></i> 15 min</span>
+                <span class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                  4.2
+                </span>
+              </div>
+              <div class="card-actions">
+                <a href="#"><i class="fas fa-heart"></i> Save</a>
+                <a href="#"><i class="fas fa-share"></i> Share</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=400&h=200&fit=crop" alt="Homemade Burger">
+            <div class="card-content">
+              <h3>Ultimate Beef Burger</h3>
+              <p>Juicy homemade burger with caramelized onions and special sauce</p>
+              <div class="card-meta">
+                <span><i class="fas fa-clock"></i> 30 min</span>
+                <span class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  4.8
+                </span>
+              </div>
+              <div class="card-actions">
+                <a href="#"><i class="fas fa-heart"></i> Save</a>
+                <a href="#"><i class="fas fa-share"></i> Share</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?w=400&h=200&fit=crop" alt="Chocolate Cake">
+            <div class="card-content">
+              <h3>Decadent Chocolate Cake</h3>
+              <p>Rich, moist chocolate cake with silky ganache frosting</p>
+              <div class="card-meta">
+                <span><i class="fas fa-clock"></i> 45 min</span>
+                <span class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  4.9
+                </span>
+              </div>
+              <div class="card-actions">
+                <a href="#"><i class="fas fa-heart"></i> Save</a>
+                <a href="#"><i class="fas fa-share"></i> Share</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 2rem;">
+          <a href="browse.html" class="btn">
+            <i class="fas fa-arrow-right"></i>
+            View All Recipes
+          </a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="logo">
+        <i class="fas fa-utensils"></i>
+        RecipeHub
+      </div>
+      <p>Bringing food lovers together, one recipe at a time.</p>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+      <p class="copyright">© 2024 RecipeHub. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
