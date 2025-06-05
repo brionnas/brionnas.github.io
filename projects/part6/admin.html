@@ -65,7 +65,7 @@
           </div>
 
           <div class="card">
-            <img src="https://images.unsplash.com/photo-1603073524928-c2ee8888f095?w=400&h=200&fit=crop" alt="Thai Curry" />
+            <img src="images/shrimp-tacos.jpg" alt="Thai Curry" />
             <div class="card-content">
               <h3>Spicy Thai Curry</h3>
               <p>Submitted by: Mike Chen</p>
@@ -141,25 +141,6 @@
     </div>
   </footer>
 
-  <script>
-    // Mobile menu toggle
-    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-    const mainNav = document.getElementById('mainNav');
-    const menuIcon = mobileMenuToggle.querySelector('i');
-
-    mobileMenuToggle.addEventListener('click', () => {
-      mainNav.classList.toggle('active');
-      menuIcon.classList.toggle('fa-bars');
-      menuIcon.classList.toggle('fa-times');
-    });
-
-    document.addEventListener('click', (e) => {
-      if (!mainNav.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
-        mainNav.classList.remove('active');
-        menuIcon.classList.add('fa-bars');
-        menuIcon.classList.remove('fa-times');
-      }
-    });
-  </script>
+  <script src="toggleMenu.js"></script>
 </body>
 </html>

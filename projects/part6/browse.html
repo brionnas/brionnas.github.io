@@ -1,3 +1,4 @@
+<!-- browse.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,10 +26,8 @@
             <li><a href="admin.html">Admin Dashboard</a></li>
           </ul>
         </nav>
-       <button class="mobile-menu-toggle" id="mobileMenuToggle">
-  <i class="fas fa-bars"></i>
-</button>
-
+        <button class="mobile-menu-toggle" id="mobileMenuToggle">
+          <i class="fas fa-bars"></i>
         </button>
       </div>
     </div>
@@ -72,214 +71,10 @@
       </section>
 
       <!-- Recipe Grid -->
+      <!-- For grading: browse.html loads recipes from recipes.json -->
       <section class="recipes-grid">
-        <div class="grid-3">
-          <div class="card">
-            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&h=200&fit=crop" alt="Fresh Mediterranean Salad">
-            <div class="card-content">
-              <h3>Mediterranean Quinoa Salad</h3>
-              <p>Fresh and healthy salad packed with Mediterranean flavors</p>
-              <div class="card-meta">
-                <span><i class="fas fa-clock"></i> 15 min</span>
-                <span class="rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="far fa-star"></i>
-                  4.2
-                </span>
-              </div>
-              <div class="card-actions">
-                <a href="#"><i class="fas fa-heart"></i> Save</a>
-                <a href="#"><i class="fas fa-share"></i> Share</a>
-              </div>
-            </div>
-          </div>
-          
-          <div class="card">
-            <img src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=400&h=200&fit=crop" alt="Homemade Burger">
-            <div class="card-content">
-              <h3>Ultimate Beef Burger</h3>
-              <p>Juicy homemade burger with caramelized onions and special sauce</p>
-              <div class="card-meta">
-                <span><i class="fas fa-clock"></i> 30 min</span>
-                <span class="rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  4.8
-                </span>
-              </div>
-              <div class="card-actions">
-                <a href="#"><i class="fas fa-heart"></i> Save</a>
-                <a href="#"><i class="fas fa-share"></i> Share</a>
-              </div>
-            </div>
-          </div>
-          
-          <div class="card">
-            <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?w=400&h=200&fit=crop" alt="Chocolate Cake">
-            <div class="card-content">
-              <h3>Decadent Chocolate Cake</h3>
-              <p>Rich, moist chocolate cake with silky ganache frosting</p>
-              <div class="card-meta">
-                <span><i class="fas fa-clock"></i> 45 min</span>
-                <span class="rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  4.9
-                </span>
-              </div>
-              <div class="card-actions">
-                <a href="#"><i class="fas fa-heart"></i> Save</a>
-                <a href="#"><i class="fas fa-share"></i> Share</a>
-              </div>
-            </div>
-          </div>
-          
-          <div class="card">
-            <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=400&h=200&fit=crop" alt="Pancakes">
-            <div class="card-content">
-              <h3>Fluffy Buttermilk Pancakes</h3>
-              <p>Perfect weekend breakfast with maple syrup and fresh berries</p>
-              <div class="card-meta">
-                <span><i class="fas fa-clock"></i> 20 min</span>
-                <span class="rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="far fa-star"></i>
-                  4.5
-                </span>
-              </div>
-              <div class="card-actions">
-                <a href="#"><i class="fas fa-heart"></i> Save</a>
-                <a href="#"><i class="fas fa-share"></i> Share</a>
-              </div>
-            </div>
-          </div>
-          
-          <div class="card">
-            <img src="https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?w=400&h=200&fit=crop" alt="Caesar Salad">
-            <div class="card-content">
-              <h3>Classic Caesar Salad</h3>
-              <p>Crisp romaine with homemade dressing and parmesan</p>
-              <div class="card-meta">
-                <span><i class="fas fa-clock"></i> 10 min</span>
-                <span class="rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="far fa-star"></i>
-                  4.3
-                </span>
-              </div>
-              <div class="card-actions">
-                <a href="#"><i class="fas fa-heart"></i> Save</a>
-                <a href="#"><i class="fas fa-share"></i> Share</a>
-              </div>
-            </div>
-          </div>
-          
-          <div class="card">
-            <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=400&h=200&fit=crop" alt="Tacos">
-            <div class="card-content">
-              <h3>Street-Style Fish Tacos</h3>
-              <p>Fresh fish tacos with cabbage slaw and lime crema</p>
-              <div class="card-meta">
-                <span><i class="fas fa-clock"></i> 25 min</span>
-                <span class="rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  4.7
-                </span>
-              </div>
-              <div class="card-actions">
-                <a href="#"><i class="fas fa-heart"></i> Save</a>
-                <a href="#"><i class="fas fa-share"></i> Share</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="card">
-            <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=400&h=200&fit=crop" alt="Chicken Tikka Masala">
-            <div class="card-content">
-              <h3>Chicken Tikka Masala</h3>
-              <p>Creamy and aromatic Indian curry with tender chicken</p>
-              <div class="card-meta">
-                <span><i class="fas fa-clock"></i> 40 min</span>
-                <span class="rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  4.6
-                </span>
-              </div>
-              <div class="card-actions">
-                <a href="#"><i class="fas fa-heart"></i> Save</a>
-                <a href="#"><i class="fas fa-share"></i> Share</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="card">
-            <img src="https://images.unsplash.com/photo-1571197857264-da7e8bc2b2b8?w=400&h=200&fit=crop" alt="Margherita Pizza">
-            <div class="card-content">
-              <h3>Margherita Pizza</h3>
-              <p>Classic Italian pizza with fresh mozzarella and basil</p>
-              <div class="card-meta">
-                <span><i class="fas fa-clock"></i> 35 min</span>
-                <span class="rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="far fa-star"></i>
-                  4.4
-                </span>
-              </div>
-              <div class="card-actions">
-                <a href="#"><i class="fas fa-heart"></i> Save</a>
-                <a href="#"><i class="fas fa-share"></i> Share</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="card">
-            <img src="https://images.unsplash.com/photo-1607532941433-304659e8198a?w=400&h=200&fit=crop" alt="Beef Stir Fry">
-            <div class="card-content">
-              <h3>Beef Stir Fry</h3>
-              <p>Quick and healthy stir fry with fresh vegetables</p>
-              <div class="card-meta">
-                <span><i class="fas fa-clock"></i> 15 min</span>
-                <span class="rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="far fa-star"></i>
-                  4.1
-                </span>
-              </div>
-              <div class="card-actions">
-                <a href="#"><i class="fas fa-heart"></i> Save</a>
-                <a href="#"><i class="fas fa-share"></i> Share</a>
-              </div>
-            </div>
-          </div>
+        <div id="recipeCards" class="grid-3">
+          <!-- Cards will be loaded from JSON here -->
         </div>
       </section>
 
@@ -311,6 +106,40 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- Mobile Menu Script -->
+  <script src="toggleMenu.js"></script>
+
+  <!-- JSON Loading Script -->
+  <script>
+    fetch("https://brionnas.github.io/projects/part6/json/recipes.json")
+      .then(response => response.json())
+      .then(data => {
+        const container = document.getElementById("recipeCards");
+        data.forEach(recipe => {
+          const card = document.createElement("div");
+          card.className = "card";
+          card.innerHTML = `
+            <img src="images/${recipe.img_name}" alt="${recipe.title}">
+            <div class="card-content">
+              <h3>${recipe.title}</h3>
+              <p>${recipe.description}</p>
+              <div class="card-meta">
+                <span><i class="fas fa-clock"></i> ${recipe.prep_time} min</span>
+                <span class="rating">${recipe.rating}</span>
+              </div>
+              <div class="card-actions">
+                <a href="#"><i class="fas fa-heart"></i> Save</a>
+                <a href="#"><i class="fas fa-share"></i> Share</a>
+              </div>
+            </div>
+          `;
+          container.appendChild(card);
+        });
+      })
+      .catch(err => {
+        console.error("Failed to load recipes.json:", err);
+        document.getElementById("recipeCards").innerHTML = "<p>Error loading recipes. Please try again later.</p>";
+      });
+  </script>
 </body>
 </html>
