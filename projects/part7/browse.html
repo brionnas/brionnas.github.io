@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Browse Recipes - RecipeHub</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="nav-container">
+        <div class="logo">
+          <i class="fas fa-utensils"></i> RecipeHub
+        </div>
+        <nav id="mainNav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="browse.html" class="active">Browse Recipes</a></li>
+            <li><a href="cookbook.html">My Cookbook</a></li>
+            <li><a href="submit.html">Submit Recipe</a></li>
+            <li><a href="admin.html">Admin Dashboard</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <h1>Browse Recipes</h1>
+        <p>Discover thousands of delicious recipes from our community</p>
+      </div>
+    </section>
+
+    <section class="filters-section">
+      <div class="filters">
+        <select>
+          <option>All Categories</option>
+          <option>Appetizers</option>
+          <option>Main Dishes</option>
+          <option>Desserts</option>
+          <option>Soups & Salads</option>
+          <option>Beverages</option>
+        </select>
+        <select>
+          <option>All Dietary Types</option>
+          <option>Vegetarian</option>
+          <option>Vegan</option>
+          <option>Gluten-Free</option>
+          <option>Keto</option>
+          <option>Low-Carb</option>
+        </select>
+        <select>
+          <option>Sort by Newest</option>
+          <option>Most Popular</option>
+          <option>Highest Rated</option>
+          <option>Quick & Easy</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="recipes-grid">
+      <div id="recipeCards" class="grid-3"></div>
+    </section>
+
+    <section class="load-more">
+      <button class="btn btn-secondary">
+        <i class="fas fa-plus"></i> Load More Recipes
+      </button>
+    </section>
+  </main>
+
+  <!-- Recipe Modal -->
+  <div id="recipeModal" class="modal">
+    <div class="modal-content">
+      <span class="close-button" id="closeModal">&times;</span>
+      <h2 id="modalTitle">Title</h2>
+      <img id="modalImage" src="" alt="" />
+      <p id="modalDesc"></p>
+      <p><strong>Prep Time:</strong> <span id="modalPrepTime"></span> minutes</p>
+      <p><strong>Rating:</strong> <span id="modalRating"></span></p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="logo"><i class="fas fa-utensils"></i> RecipeHub</div>
+      <p>Bringing food lovers together, one recipe at a time.</p>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+      <p class="copyright">© 2024 RecipeHub. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="toggleMenu.js"></script>
+  <script>
+    fetch("https://brionnas.github.io/projects/part6/json/recipes.json")
+      .then(response => response.json())
+      .then(data => {
+        const container = document.getElementById("recipeCards");
+
+        data.forEach(recipe => {
+          const card = document.createElement("div");
+          card.className = "card";
+          card.innerHTML = `
+            <img src="images/${recipe.img_name}" alt="${recipe.title}">
+            <div class="card-content">
+              <h3>${recipe.title}</h3>
+              <p>${recipe.description}</p>
+              <div class="card-meta">
+                <span><i class="fas fa-clock"></i> ${recipe.prep_time} min</span>
+                <span class="rating">${recipe.rating}</span>
+              </div>
+              <div class="card-actions">
+                <i class="fas fa-heart"></i> Save
+                <i class="fas fa-share"></i> Share
+              </div>
+            </div>
+          `;
+
+          card.addEventListener("click", () => {
+            document.getElementById("modalTitle").textContent = recipe.title;
+            document.getElementById("modalImage").src = `images/${recipe.img_name}`;
+            document.getElementById("modalImage").alt = recipe.title;
+            document.getElementById("modalDesc").textContent = recipe.description;
+            document.getElementById("modalPrepTime").textContent = recipe.prep_time;
+            document.getElementById("modalRating").textContent = recipe.rating;
+            document.getElementById("recipeModal").style.display = "block";
+          });
+
+          container.appendChild(card);
+        });
+      })
+      .catch(error => {
+        document.getElementById("recipeCards").innerHTML = "<p>Error loading recipes.</p>";
+        console.error("Error fetching recipes:", error);
+      });
+
+    document.getElementById("closeModal").onclick = () => {
+      document.getElementById("recipeModal").style.display = "none";
+    };
+
+    window.onclick = function (event) {
+      const modal = document.getElementById("recipeModal");
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    };
+  </script>
+</body>
+</html>
+

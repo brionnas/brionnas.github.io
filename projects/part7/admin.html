@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Dashboard — RecipeHub</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="nav-container">
+        <a href="index.html" class="logo">
+          <i class="fas fa-utensils"></i> RecipeHub
+        </a>
+        <nav id="mainNav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="browse.html">Browse Recipes</a></li>
+            <li><a href="cookbook.html">My Cookbook</a></li>
+            <li><a href="submit.html">Submit Recipe</a></li>
+            <li><a href="admin.html" class="active">Admin Dashboard</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+       <button class="mobile-menu-toggle" id="mobileMenuToggle">
+  <i class="fas fa-bars"></i>
+</button>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <h1>Admin Dashboard</h1>
+        <p>Manage recipe submissions and monitor community activity</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <!-- Pending Recipes -->
+      <section>
+        <h2 class="section-title">Pending Recipe Submissions</h2>
+        <div class="grid-3">
+          <!-- Recipe Card -->
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=400&h=200&fit=crop" alt="Apple Pie" />
+            <div class="card-content">
+              <h3>Grandma's Apple Pie</h3>
+              <p>Submitted by: Sarah Johnson</p>
+              <div class="card-meta">
+                <span><i class="fas fa-clock"></i> 2 hours ago</span>
+                <span><i class="fas fa-eye"></i> Pending Review</span>
+              </div>
+              <div class="card-actions">
+                <a href="#"><i class="fas fa-check" style="color: forestgreen;"></i> Approve</a>
+                <a href="#"><i class="fas fa-edit" style="color: orange;"></i> Edit</a>
+                <a href="#"><i class="fas fa-times" style="color: red;"></i> Reject</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="images/shrimp-tacos.jpg" alt="Thai Curry" />
+            <div class="card-content">
+              <h3>Spicy Thai Curry</h3>
+              <p>Submitted by: Mike Chen</p>
+              <div class="card-meta">
+                <span><i class="fas fa-clock"></i> 5 hours ago</span>
+                <span><i class="fas fa-eye"></i> Pending Review</span>
+              </div>
+              <div class="card-actions">
+                <a href="#"><i class="fas fa-check" style="color: forestgreen;"></i> Approve</a>
+                <a href="#"><i class="fas fa-edit" style="color: orange;"></i> Edit</a>
+                <a href="#"><i class="fas fa-times" style="color: red;"></i> Reject</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=400&h=200&fit=crop" alt="Brownies" />
+            <div class="card-content">
+              <h3>Chocolate Brownies</h3>
+              <p>Submitted by: Emma Davis</p>
+              <div class="card-meta">
+                <span><i class="fas fa-clock"></i> 1 day ago</span>
+                <span><i class="fas fa-eye"></i> Pending Review</span>
+              </div>
+              <div class="card-actions">
+                <a href="#"><i class="fas fa-check" style="color: forestgreen;"></i> Approve</a>
+                <a href="#"><i class="fas fa-edit" style="color: orange;"></i> Edit</a>
+                <a href="#"><i class="fas fa-times" style="color: red;"></i> Reject</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Community Stats -->
+      <section style="margin-top: 4rem;">
+        <h2 class="section-title">Community Activity</h2>
+        <div class="grid-3">
+          <div class="stat-card">
+            <i class="fas fa-users" style="color: var(--primary); font-size: 2.5rem;"></i>
+            <h4>Active Users</h4>
+            <p>1,247</p>
+          </div>
+          <div class="stat-card">
+            <i class="fas fa-utensils" style="color: var(--accent); font-size: 2.5rem;"></i>
+            <h4>Total Recipes</h4>
+            <p>3,892</p>
+          </div>
+          <div class="stat-card">
+            <i class="fas fa-heart" style="color: var(--success); font-size: 2.5rem;"></i>
+            <h4>Recipe Saves</h4>
+            <p>12,504</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="logo">
+        <i class="fas fa-utensils"></i> RecipeHub
+      </div>
+      <p>Bringing food lovers together, one recipe at a time.</p>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+      <p>© 2024 RecipeHub. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="toggleMenu.js"></script>
+</body>
+</html>
