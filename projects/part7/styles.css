@@ -88,10 +88,7 @@ nav a.active {
 
 .mobile-menu-toggle {
   display: none;
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  color: var(--primary);
+  color: black;
   cursor: pointer;
 }
 
